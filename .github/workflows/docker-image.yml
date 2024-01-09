@@ -25,14 +25,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Install deps
+        run: apt update && apt install -y postgresql-server-dev-13
+
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '2.7'
       - run: bundle install
-
-      - name: Install deps
-        run: apt update && apt install -y postgresql-server-dev-13
 
       - name: Run tests
         run: bundle exec rspec
