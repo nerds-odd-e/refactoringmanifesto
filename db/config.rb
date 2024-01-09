@@ -6,7 +6,7 @@ end
 
 configure :production do
   log "PRODUCTION"
-  DataMapper.setup(:default, "postgres://@127.0.0.1/refactoringmanifesto")
+  DataMapper.setup(:default, ENV['REFACTORINGMANIFESTO_DB_URL'])
 end
 
 configure :test do
@@ -16,6 +16,6 @@ end
 
 configure :development do
   log "DEVELOPMENT"
-  DataMapper.setup(:default, "postgres://@127.0.0.1/refactoringmanifesto")
+  DataMapper.setup(:default, "postgres://127.0.0.1/refactoringmanifesto")
   DataMapper.auto_migrate!
 end
