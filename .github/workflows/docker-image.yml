@@ -26,7 +26,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install deps
-        run: sudo apt update && sudo apt install -y postgresql-server-dev-13
+        run: |
+          echo "deb $REPO_URL `lsb_release -cs`-pgdg main" | tee /etc/apt/sources.list.d/pgdg.list
+          sudo apt update && sudo apt install -y postgresql-server-dev-13
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
