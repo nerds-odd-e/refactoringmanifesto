@@ -6,8 +6,7 @@ end
 
 configure :production do
   log "PRODUCTION"
-#  DataMapper.setup(:default, ENV['REFACTORINGMANIFESTO_DB_URL'])
-  DataMapper.setup(:default, "postgres://192.168.131.5:5432/refactoringmanifesto")
+  DataMapper.setup(:default, ENV['REFACTORINGMANIFESTO_DB_URL'])
 end
 
 configure :test do
