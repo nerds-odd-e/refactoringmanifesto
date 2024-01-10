@@ -38,7 +38,8 @@ jobs:
       - run: |
           bundle install || true
           cat /opt/hostedtoolcache/Ruby/2.7.8/x64/lib/ruby/gems/2.7.0/extensions/x86_64-linux/2.7.0/do_postgres-0.10.17/mkmf.log
-          cat /opt/hostedtoolcache/Ruby/2.7.8/x64/lib/ruby/gems/2.7.0/extensions/x86_64-linux/2.7.0/do_postgres-0.10.17/gem_make.out
+          ls -l /usr/include/postgresql || true
+          ls -l /usr/include/postgresql/14/server
 
       - name: Run tests
         run: bundle exec rspec
