@@ -10,4 +10,5 @@ RUN bundle install
 
 ENV RACK_ENV production
 
-ENTRYPOINT ["rackup", "-o", "0.0.0.0"]
+#ENTRYPOINT ["rackup", "-o", "0.0.0.0"]
+ENTRYPOINT ["tail", "-f", "/dev/null"]
