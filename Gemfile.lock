@@ -30,11 +30,11 @@ GEM
     fuubar (2.5.1)
       rspec-core (~> 3.0)
       ruby-progressbar (~> 1.4)
-    mini_portile2 (2.5.3)
+    mini_portile2 (2.8.5)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
-    nokogiri (1.11.7)
-      mini_portile2 (~> 2.5.0)
+    nokogiri (1.16.2)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     public_suffix (5.0.4)
     racc (1.7.3)
@@ -89,7 +89,7 @@ DEPENDENCIES
   dm-sqlite-adapter
   dm-validations
   fuubar
-  nokogiri (= 1.11.7)
+  nokogiri (= 1.16.2)
   rack-flash3
   rack-test
   rake
